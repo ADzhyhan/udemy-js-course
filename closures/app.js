@@ -61,3 +61,13 @@ function minus (fNum = 0) {
 // console.log(minus(5)(6)); 
 
 //2 
+function multiplyMaker(num1 = 0) {
+  return function(num2 = 0) {
+    return num1 *= num2;
+  };
+} 
+
+const multiply = multiplyMaker(2); 
+// console.log(multiply(2)); 
+// console.log(multiply(2)); 
+// console.log(multiply(3));
