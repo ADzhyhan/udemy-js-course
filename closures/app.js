@@ -100,7 +100,55 @@ const moduleStr = (function() {
   };
 })(); 
 
-moduleStr.setStr('test'); 
-console.log(moduleStr.getStr()); 
-console.log(moduleStr.getStrLength()); 
-console.log(moduleStr.getReverseStr()); 
+// moduleStr.setStr('test'); 
+// console.log(moduleStr.getStr()); 
+// console.log(moduleStr.getStrLength()); 
+// console.log(moduleStr.getReverseStr());  
+
+//4 
+const calc = (function() {
+  let num = 0;
+
+  function setNumber(val) {
+    num = Number(val); 
+    return this; 
+  };
+
+  function plus(val) {
+    num += Number(val);
+    return this;
+  }; 
+
+  function minus(val) {
+    num -= Number(val);
+    return this;
+  }; 
+
+  function devide(val) {
+    num /= Number(val); 
+    return this;
+  }; 
+
+  function powTo(a = 2) {
+    num = Math.pow(num, a); 
+    return  this;
+  }
+
+  function getNumber() {
+    return Number(num.toFixed(2) || 0);
+  }
+
+  return {
+    setNumber, 
+    plus, 
+    minus, 
+    devide, 
+    powTo, 
+    getNumber
+  }
+})(); 
+
+console.log(calc
+  .setNumber(10)
+  .powTo(2)
+  .getNumber());
