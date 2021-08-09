@@ -70,4 +70,37 @@ function multiplyMaker(num1 = 0) {
 const multiply = multiplyMaker(2); 
 // console.log(multiply(2)); 
 // console.log(multiply(2)); 
-// console.log(multiply(3));
+// console.log(multiply(3)); 
+
+//3
+const moduleStr = (function() {
+  let str = '';
+  
+  function setStr(val) {
+    str = String(val);
+  }; 
+
+  function getStr() {
+    return str;
+  }; 
+
+  function getStrLength() {
+    return str.length; 
+  }; 
+
+  function getReverseStr() {
+    return str.split('').reverse().join('');
+  };
+
+  return {
+    setStr,
+    getStr, 
+    getStrLength, 
+    getReverseStr
+  };
+})(); 
+
+moduleStr.setStr('test'); 
+console.log(moduleStr.getStr()); 
+console.log(moduleStr.getStrLength()); 
+console.log(moduleStr.getReverseStr()); 
