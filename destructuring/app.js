@@ -71,7 +71,26 @@
 //ANSWERS 
 
 //1
+// const othersElements = (first, ...others) => ({ first, others });
 
-const othersElements = (first, ...others) => ({ first, others });
+// console.log(othersElements(2, 4, 5)) ;
 
-console.log(othersElements(2, 4, 5)) ;
+
+//2
+const organisation = {
+  name: 'Google',
+  info: { 
+    employees: ['Vlad', 'Olga'], 
+    partners: ['Microsoft', 'Facebook', 'Xing'], 
+  }
+}; 
+
+function getInfo({
+  name = 'Unknown,',
+  info: { partners: [first = 'none', second = 'none'] = [] } = {}
+} = {}) {
+  console.log(`Name: ${name}`);
+  console.log(`${first}, ${second}`);
+} 
+
+getInfo(organisation);
