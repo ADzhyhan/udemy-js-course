@@ -29,4 +29,24 @@
 
 //4
 // Используя разметку из предыдущего задания.
-// Найти элемент, который находится перед и после списка ul.
+// Найти элемент, который находится перед и после списка ul. 
+
+
+
+//ANSWERS 
+
+
+//----1---- 
+//1
+console.log(document.head); 
+//2
+console.log(document.body);
+//3 
+console.log(document.body.children); 
+//4 a 
+console.log(document.firstElementChild);
+console.log(document.firstElementChild.children); 
+//4 b 
+const div = document.body.firstElementChild;
+const arr = [...div.children].filter(p => p !== div.firstElementChild && p !== div.lastElementChild); 
+console.log(arr); 
