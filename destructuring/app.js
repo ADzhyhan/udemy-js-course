@@ -141,4 +141,7 @@ console.log(name, balance, email, first, last, nameFriend);
 
 //4 
 const newUser = [ ...user.tags, ...user.friends ];
-console.log(newUser);
+console.log(newUser); 
+
+let f = function g(){ return 23; };
+typeof g();
