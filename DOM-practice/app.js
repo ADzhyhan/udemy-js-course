@@ -52,8 +52,13 @@
 // console.log(arr);  
 
 //----2---- 
-const isParent = (parent, child) => {
-  return parent === child.closest('div')
-}
+// const isParent = (parent, child) => {
+//   return parent === child.closest('div')
+// }
 
-console.log(isParent(document.body.children[0], document.querySelector('mark')));
+// console.log(isParent(document.body.children[0], document.querySelector('mark'))); 
+
+//----3---- 
+const filtered = [...document.links].filter((a) => !a.closest('ul')); 
+
+console.log(filtered);
