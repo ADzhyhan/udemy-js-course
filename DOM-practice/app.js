@@ -37,16 +37,23 @@
 
 
 //----1---- 
-//1
-console.log(document.head); 
-//2
-console.log(document.body);
-//3 
-console.log(document.body.children); 
-//4 a 
-console.log(document.firstElementChild);
-console.log(document.firstElementChild.children); 
-//4 b 
-const div = document.body.firstElementChild;
-const arr = [...div.children].filter(p => p !== div.firstElementChild && p !== div.lastElementChild); 
-console.log(arr); 
+// //1
+// console.log(document.head); 
+// //2
+// console.log(document.body);
+// //3 
+// console.log(document.body.children); 
+// //4 a 
+// console.log(document.firstElementChild);
+// console.log(document.firstElementChild.children); 
+// //4 b 
+// const div = document.body.firstElementChild;
+// const arr = [...div.children].filter(p => p !== div.firstElementChild && p !== div.lastElementChild); 
+// console.log(arr);  
+
+//----2---- 
+const isParent = (parent, child) => {
+  return parent === child.closest('div')
+}
+
+console.log(isParent(document.body.children[0], document.querySelector('mark')));
