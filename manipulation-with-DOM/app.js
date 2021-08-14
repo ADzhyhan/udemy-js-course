@@ -87,5 +87,11 @@
 
 
 //1 
-const ul = document.querySelector('ul'); 
-ul.classList.add('list'); 
+// const ul = document.querySelector('ul'); 
+// ul.classList.add('list');  
+
+
+//2
+const element = document.querySelector('ul ~ a'); 
+element.id = 'link';
+console.log(element);
