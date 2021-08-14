@@ -92,6 +92,20 @@
 
 
 //2
-const element = document.querySelector('ul ~ a'); 
-element.id = 'link';
-console.log(element);
+// const element = document.querySelector('ul ~ a'); 
+// element.id = 'link';
+// console.log(element); 
+
+
+//3 
+// const [...li] = document.querySelectorAll('li');
+
+// li.forEach((li, i)=> {
+//   if(!(i % 2)) {
+//     li.classList.add('item');
+//   }
+// }) 
+
+//4 
+const [...links] = document.links; 
+links.forEach(link => link.classList.add('custom-link'));
