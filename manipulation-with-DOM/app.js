@@ -40,14 +40,24 @@
 
 
 //3 
-const ul = document.querySelector('ul');
+// const ul = document.querySelector('ul');
 
-const getLinksFromUl = (ul) => {
-  if (!(ul instanceof HTMLElement)) return 0;
+// const getLinksFromUl = (ul) => {
+//   if (!(ul instanceof HTMLElement)) return 0;
 
-  const [...links] = ul.querySelectorAll('a') || [];
+//   const [...links] = ul.querySelectorAll('a') || [];
 
-  return links.map(a => a.textContent)
-} 
+//   return links.map(a => a.textContent)
+// } 
 
-console.log(getLinksFromUl(ul));
+// console.log(getLinksFromUl(ul)); 
+
+
+//4 
+const [...pchildNodes] = document.querySelector('p').childNodes; 
+
+pchildNodes.forEach(child => {
+  if(child.nodeType === 3) {
+    child.textContent = '-text';
+  };
+}); 
