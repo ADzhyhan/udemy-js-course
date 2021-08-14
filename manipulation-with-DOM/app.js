@@ -21,5 +21,19 @@
 
 
 //1
-const p = document.querySelector('p'); 
-console.log(p.textContent); 
+// const p = document.querySelector('p'); 
+// console.log(p.textContent);  
+
+
+//2 
+const foo = (node) => {
+  if(!(node instanceof Element)) return 0; 
+  return {
+    nodeType: node.nodeType,
+    tag: node.tagName, 
+    childs: node.childNodes.length,
+  };
+}; 
+
+const p = document.querySelector('p');
+console.log(foo(p));
