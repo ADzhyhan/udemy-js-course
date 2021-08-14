@@ -59,6 +59,14 @@
 // console.log(isParent(document.body.children[0], document.querySelector('mark'))); 
 
 //----3---- 
-const filtered = [...document.links].filter((a) => !a.closest('ul')); 
+// const filtered = [...document.links].filter((a) => !a.closest('ul')); 
 
-console.log(filtered);
+// console.log(filtered); 
+
+//----4---- 
+const ul = document.querySelector('ul');
+const prev = ul.previousElementSibling; 
+const next = ul.nextElementSibling;
+
+console.log(next);
+console.log(prev);
