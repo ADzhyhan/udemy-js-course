@@ -26,14 +26,28 @@
 
 
 //2 
-const foo = (node) => {
-  if(!(node instanceof Element)) return 0; 
-  return {
-    nodeType: node.nodeType,
-    tag: node.tagName, 
-    childs: node.childNodes.length,
-  };
-}; 
+// const foo = (node) => {
+//   if(!(node instanceof Element)) return 0; 
+//   return {
+//     nodeType: node.nodeType,
+//     tag: node.tagName, 
+//     childs: node.childNodes.length,
+//   };
+// }; 
 
-const p = document.querySelector('p');
-console.log(foo(p));
+// const p = document.querySelector('p');
+// console.log(foo(p)); 
+
+
+//3 
+const ul = document.querySelector('ul');
+
+const getLinksFromUl = (ul) => {
+  if (!(ul instanceof HTMLElement)) return 0;
+
+  const [...links] = ul.querySelectorAll('a') || [];
+
+  return links.map(a => a.textContent)
+} 
+
+console.log(getLinksFromUl(ul));
