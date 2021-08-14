@@ -1,3 +1,5 @@
+//--First hometask--
+
 //----1----
 // Найти параграф и получить его текстовое содержимое (только текст!) 
 
@@ -54,10 +56,36 @@
 
 
 //4 
-const [...pchildNodes] = document.querySelector('p').childNodes; 
+// const [...pchildNodes] = document.querySelector('p').childNodes; 
 
-pchildNodes.forEach(child => {
-  if(child.nodeType === 3) {
-    child.textContent = '-text';
-  };
-}); 
+// pchildNodes.forEach(child => {
+//   if(child.nodeType === 3) {
+//     child.textContent = '-text';
+//   };
+// }); 
+
+
+//--Second hometask-- 
+
+//1
+// Найти в коде список ul и добавить класс “list” 
+
+
+//2
+// Найти в коде ссылку, находящуюся после списка ul, и добавить id=link 
+
+
+//3
+// На li через один (начиная с самого первого) установить класс “item” 
+
+
+//4
+// На все ссылки в примере установить класс “custom-link” 
+
+
+//ANSWERS 
+
+
+//1 
+const ul = document.querySelector('ul'); 
+ul.classList.add('list'); 
