@@ -165,9 +165,15 @@
 
 
 //3
-const img = document.createElement('img');
-img.setAttribute('src', 'https://static.wikia.nocookie.net/spongebob/images/3/3e/SpongeBob_Star_show.jpeg/revision/latest?cb=20210712133010');
-img.setAttribute('alt', 'spongebob'); 
-img.setAttribute('width', '150');
-img.setAttribute('height', '200')
-document.body.insertAdjacentElement('afterbegin', img)
+// const img = document.createElement('img');
+// img.setAttribute('src', 'https://static.wikia.nocookie.net/spongebob/images/3/3e/SpongeBob_Star_show.jpeg/revision/latest?cb=20210712133010');
+// img.setAttribute('alt', 'spongebob'); 
+// img.setAttribute('width', '150');
+// img.setAttribute('height', '200')
+// document.body.insertAdjacentElement('afterbegin', img) 
+
+
+//4
+const mark = document.querySelector('mark');
+mark.classList.add('green'); 
+mark.append(' green');
