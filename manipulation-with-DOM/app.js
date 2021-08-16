@@ -174,6 +174,17 @@
 
 
 //4
-const mark = document.querySelector('mark');
-mark.classList.add('green'); 
-mark.append(' green');
+// const mark = document.querySelector('mark');
+// mark.classList.add('green'); 
+// mark.append(' green'); 
+
+
+//5
+const ul = document.querySelector('ul');
+const ulItems = [...ul.children].sort((prev, next) => {
+  return prev.textContent > next.textContent ? -1 : 1;
+}) 
+
+ul.innerHTML = '';
+
+ulItems.forEach(item => ul.appendChild(item)); 
