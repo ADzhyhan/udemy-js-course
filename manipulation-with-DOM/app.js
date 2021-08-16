@@ -158,7 +158,16 @@
   
 
 //2
-const [...links] = document.querySelectorAll('ul a');
-links.forEach(link => {
-  link.insertAdjacentHTML('beforeend', '<strong>Strong</strong>');
-}); 
+// const [...links] = document.querySelectorAll('ul a');
+// links.forEach(link => {
+//   link.insertAdjacentHTML('beforeend', '<strong>Strong</strong>');
+// }); 
+
+
+//3
+const img = document.createElement('img');
+img.setAttribute('src', 'https://static.wikia.nocookie.net/spongebob/images/3/3e/SpongeBob_Star_show.jpeg/revision/latest?cb=20210712133010');
+img.setAttribute('alt', 'spongebob'); 
+img.setAttribute('width', '150');
+img.setAttribute('height', '200')
+document.body.insertAdjacentElement('afterbegin', img)
