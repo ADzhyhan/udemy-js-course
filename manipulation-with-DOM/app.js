@@ -138,4 +138,20 @@
 
 
 //5
-// Отсортировать li внутри списка в обратном порядке (по тексту внутри)
+// Отсортировать li внутри списка в обратном порядке (по тексту внутри) 
+
+
+//ANSWERS 
+
+
+//1 
+const ulList = document.querySelector('ul');
+const countLi = ulList.children.length; 
+const newLi = 3; 
+
+for (let i = 0; i < newLi; i++) {
+  let li = document.createElement('li'); 
+  li.classList.add('new-item'); 
+  li.textContent = `item ${countLi + i + 1}`;
+  ulList.appendChild(li);
+} 
