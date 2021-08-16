@@ -145,13 +145,20 @@
 
 
 //1 
-const ulList = document.querySelector('ul');
-const countLi = ulList.children.length; 
-const newLi = 3; 
+// const ulList = document.querySelector('ul');
+// const countLi = ulList.children.length; 
+// const newLi = 3; 
 
-for (let i = 0; i < newLi; i++) {
-  let li = document.createElement('li'); 
-  li.classList.add('new-item'); 
-  li.textContent = `item ${countLi + i + 1}`;
-  ulList.appendChild(li);
-} 
+// for (let i = 0; i < newLi; i++) {
+//   let li = document.createElement('li'); 
+//   li.classList.add('new-item'); 
+//   li.textContent = `item ${countLi + i + 1}`;
+//   ulList.appendChild(li);
+// } 
+  
+
+//2
+const [...links] = document.querySelectorAll('ul a');
+links.forEach(link => {
+  link.insertAdjacentHTML('beforeend', '<strong>Strong</strong>');
+}); 
