@@ -40,7 +40,19 @@
 
 
 //3 
-const element = document.getElementById('tag');
-document.addEventListener('click', (e) => {
-  element.textContent = `Tag: ${e.target.nodeName}`;
-});
+// const element = document.getElementById('tag');
+// document.addEventListener('click', (e) => {
+//   element.textContent = `Tag: ${e.target.nodeName}`;
+// }); 
+
+
+//4
+const btn = document.getElementById('btn-generate');
+const ul = document.querySelector('ul'); 
+
+btn.addEventListener('click', (e) => {
+  const number = ul.children.length + 1; 
+  const li = document.createElement('li'); 
+  li.textContent = `Item ${number}`;
+  ul.appendChild(li);
+})
