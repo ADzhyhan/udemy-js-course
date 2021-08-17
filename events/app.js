@@ -16,3 +16,12 @@
 // При нажатии на кнопку btn-generate добавлять в список ul элемент списка Li с текстом Item + порядковый номер Li по списку, т.е Item 3, Item 4 и т.д 
 
 
+
+//ANSWERS 
+
+//1
+const btn = document.getElementById('btn-msg'); 
+
+btn.addEventListener('click', function(e) {
+  alert(e.target.dataset.text)
+});
