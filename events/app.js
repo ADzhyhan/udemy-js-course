@@ -20,8 +20,20 @@
 //ANSWERS 
 
 //1
+// const btn = document.getElementById('btn-msg'); 
+
+// btn.addEventListener('click', function(e) {
+//   alert(e.target.dataset.text)
+// });
+
+
+//2 
 const btn = document.getElementById('btn-msg'); 
 
-btn.addEventListener('click', function(e) {
-  alert(e.target.dataset.text)
+btn.addEventListener('mouseover', (e) => {
+  btn.classList.add('b-red');
+}); 
+
+btn.addEventListener('mouseout', (e) => {
+  btn.classList.remove('b-red');
 });
