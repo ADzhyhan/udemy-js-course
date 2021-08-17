@@ -98,4 +98,36 @@
 
 // 2. Возращаете фон обратно когда пользователь уводит мышку с блока.
 
-// 3. Добавление фона из первой части задания сделать с задержкой в 200мс. Т.е каждый последующий блок должен изменить свой фон за 200мс позже предыдущего. Например если первый блок поменял через 200мс то следующий должен поменять через 400 и т.д.
+// 3. Добавление фона из первой части задания сделать с задержкой в 200мс. Т.е каждый последующий блок должен изменить свой фон за 200мс позже предыдущего. Например если первый блок поменял через 200мс то следующий должен поменять через 400 и т.д. 
+
+
+const setRandomColor = (el) => {
+  const colors = ['red', 'blue', 'olive', 'orange', 'pink', 'yellow', 'green', 'gray', 'aqua', 'brown'];
+  const randomColor = colors[Math.floor(Math.random() * colors.length)];
+  el.style.background = randomColor;
+};
+
+const resetColor = (el) => {
+  el.style.background = '';
+}; 
+
+const hover = (e) => {
+  let elements = [e.currentTarget]; 
+  let currentEl = e.currentTarget; 
+
+  while(currentEl) {
+    elements = [...elements, ...currentEl.children]; 
+    currentEl = currentEl.children[currentEl.children.length - 1];
+  } 
+
+  elements.forEach((el, index) => {
+    setTimeout(setRandomColor, 200 * (index + 1), el);
+  });
+} 
+
+const mouseLeave = (e) => {
+  resetColor(e.currentTarget);
+} 
+
+document.querySelectorAll('.box').forEach(box => box.addEventListener('mouseenter', hover)); 
+document.querySelectorAll('.box').forEach(box => box.addEventListener('mouseleave', mouseLeave));
