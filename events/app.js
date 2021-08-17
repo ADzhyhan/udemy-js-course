@@ -28,12 +28,19 @@
 
 
 //2 
-const btn = document.getElementById('btn-msg'); 
+// const btn = document.getElementById('btn-msg'); 
 
-btn.addEventListener('mouseover', (e) => {
-  btn.classList.add('b-red');
-}); 
+// btn.addEventListener('mouseover', (e) => {
+//   btn.classList.add('b-red');
+// }); 
 
-btn.addEventListener('mouseout', (e) => {
-  btn.classList.remove('b-red');
+// btn.addEventListener('mouseout', (e) => {
+//   btn.classList.remove('b-red');
+// }); 
+
+
+//3 
+const element = document.getElementById('tag');
+document.addEventListener('click', (e) => {
+  element.textContent = `Tag: ${e.target.nodeName}`;
 });
