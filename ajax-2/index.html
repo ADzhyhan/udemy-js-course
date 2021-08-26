@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+  </head>
+  <body>
+    <!-- Создать форму добавления пользователя состоящую из следующих полей name, email, phone, website.
+    При сабмите формы сделать POST запрос на сервер https://jsonplaceholder.typicode.com/users
+    После ответа от сервера добавлять полученного пользователя на страницу в список.
+    Для визуализации формы и спискаможете использовать произвольные стили. -->
+    
+    <section class="users-wrapper">
+      <div class="container mt-5" style="width: 500px;">
+        <form>
+          <div class="mb-3">
+            <label for="exampleInputName" class="form-label">Name</label>
+            <input type="text" class="form-control" id="exampleInputName">
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPhone" class="form-label">Phone</label>
+            <input type="number" class="form-control" id="exampleInputPhone">
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputSite" class="form-label">Website</label>
+            <input type="text" class="form-control" id="exampleInputSite">
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form> 
+        
+        <ul class="list-group users-list mt-5">
+        </ul>
+      </div>
+    </section>
+    
+  </body>
+</html>
