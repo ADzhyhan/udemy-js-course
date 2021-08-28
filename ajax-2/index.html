@@ -13,7 +13,7 @@
     После ответа от сервера добавлять полученного пользователя на страницу в список.
     Для визуализации формы и спискаможете использовать произвольные стили. -->
 
-    <section class="user-actions-wrap mt-5">
+    <!-- <section class="user-actions-wrap mt-5">
       <div class="container">
         <div class="row">
           <div class="col col-4">
@@ -21,7 +21,6 @@
               <div class="card-header">
                 Add new user
               </div>
-              <!-- /.card-header -->
               <div class="card-body">
                 <form name="new-user-form">
                   <div class="form-group">
@@ -67,11 +66,11 @@
                   <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
               </div>
-              <!-- /.card-body -->
+
             </div>
-            <!-- /.card -->
+
           </div>
-          <!-- /.col col-4 -->
+
           <div class="col col-6">
             <div class="card">
               <div class="card-header">
@@ -80,14 +79,38 @@
               <div class="list-group users-list"></div>
             </div>
           </div>
-          <!-- /.col col-6 -->
+
         </div>
-        <!-- /.row -->
+
       </div>
-      <!-- /.container -->
-    </section>
+
+    </section> -->
     <!-- /.user-actions-wrap -->
     
+    <div class="container mt-5" style="width: 500px;">
+      <form name="user-form">
+        <div class="mb-3">
+          <label for="name" class="form-label">Username</label>
+          <input type="text" class="form-control" id="name">
+          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3">
+          <label for="phone" class="form-label">User phone</label>
+          <input type="text" class="form-control" id="phone">
+        </div>
+        <div class="mb-3">
+          <label for="website" class="form-label">User website</label>
+          <input type="text" class="form-control" id="website">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+       
+    </div>
+     
 
     <script src="app.js"></script>
   </body>
